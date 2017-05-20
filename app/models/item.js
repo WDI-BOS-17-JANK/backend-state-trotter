@@ -4,11 +4,11 @@ const mongoose = require('mongoose');
 
 const itemSchema = new mongoose.Schema({
   // item id created automatically
-  title: {
+  title: { // item.title
     type: String,
     required: true,
   },
-  state: {
+  state: { // item.state
     type: String,
     required: true,
   },
@@ -16,19 +16,24 @@ const itemSchema = new mongoose.Schema({
   //   type: String,
   //   required: true,
   // },
-  status: { // For complete/incomplete
+  status: { // item.status - For complete/incomplete items
     type: String,
     required: true,
   },
-  description: {
+  description: { // item.description
     type: String,
     // required: true,
   },
-  due_date: {
-    // type: Date,
-    type: String
-    // required: true,
+  due_date: { // item.due_date
+    type: Date,
+    required: true,
+    match: /\d{4}-\d{2}-\d{2}/
   },
+  // due_date: {
+  //   // type: Date,
+  //   type: String
+  //   // required: true,
+  // },
   // gps: {
   //   type: _____,
   //   required: true,
