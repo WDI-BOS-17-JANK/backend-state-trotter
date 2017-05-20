@@ -25,7 +25,8 @@ const itemSchema = new mongoose.Schema({
     // required: true,
   },
   due_date: {
-    type: Date,
+    // type: Date,
+    type: String
     // required: true,
   },
   // gps: {
