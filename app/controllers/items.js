@@ -8,11 +8,16 @@ const authenticate = require('./concerns/authenticate');
 const setUser = require('./concerns/set-current-user');
 const setModel = require('./concerns/set-mongoose-model');
 
+// if we impliment public/private items this functionality
+// will change
 const index = (req, res, next) => {
-  Item.find()
+  // only find() items for currently signed in user
+  // console.log(req)
+  console.log(req.user)
+  Item.find({_owner: req.user._id})
     .then(items => res.json({
       items: items.map((e) =>
-        e.toJSON({ virtuals: true, user: req.user })),
+        e.toJSON({ virtuals: true, user: req.user }))
     }))
     .catch(next);
 };
@@ -57,7 +62,7 @@ module.exports = controller({
   destroy,
 }, { before: [
   { method: setUser, only: ['index', 'show'] }, //
-  { method: authenticate, except: ['index', 'show'] },
+  { method: authenticate, except: ['show'] },
   { method: setModel(Item), only: ['show'] },
   { method: setModel(Item, { forUser: true }), only: ['update', 'destroy'] },
 ], });
