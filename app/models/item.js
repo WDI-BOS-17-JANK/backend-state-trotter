@@ -12,6 +12,19 @@ const itemSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  location: { // item.state
+    type: String,
+    required: true,
+  },
+  category: { // item.state
+    type: String,
+    required: true,
+  },
+  completed_date: { // Null when item created. Updates with today's date when user clicks checkbox to indicate item completed.
+    type: Date,
+    required: false,
+    match: /\d{4}-\d{2}-\d{2}/
+  },
   // isPublic: {
   //   type: String,
   //   required: true,
