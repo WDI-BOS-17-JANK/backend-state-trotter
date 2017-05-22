@@ -8,15 +8,15 @@ const itemSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  state: { // item.state
+  state: {
     type: String,
     required: true,
   },
-  location: { // item.state
+  location: {
     type: String,
     required: true,
   },
-  category: { // item.state
+  category: {
     type: String,
     required: true,
   },
