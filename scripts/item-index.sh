@@ -2,8 +2,7 @@
 
 API="http://localhost:4741"
 URL_PATH="/items"
-TOKEN="84s4FxhGzcKUhEnMoCfa9cqH6jWWWWESAs/FXfT3F1U=--HRcd4OrmeRNa1OX76xIIBTZkm/c2EraT4mDrVyVBYKE="
-
+TOKEN="OMEFpJ7Iz2/+IHhZ4HLGN5m4vGo+GYNu7QZ261qE9JQ=--05lUQbXElPiPYOYzYVaD1dJpcBDQWNGImaPQdO4jnRA="
 
 curl "${API}${URL_PATH}" \
   --include \
