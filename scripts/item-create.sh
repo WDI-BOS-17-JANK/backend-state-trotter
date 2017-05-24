@@ -2,12 +2,14 @@
 
 API="http://localhost:4741"
 URL_PATH="/items"
-TOKEN="OMTa0XwyDDeAJqBbeaWUAlxpfbXkiNZ7c0VmU9HdJ4U=--7YEaASNUmXK8KBLYm/MHU10PRKjjHEdcxvmBN7YsraY="
+TOKEN="OMEFpJ7Iz2/+IHhZ4HLGN5m4vGo+GYNu7QZ261qE9JQ=--05lUQbXElPiPYOYzYVaD1dJpcBDQWNGImaPQdO4jnRA="
 TITLE="go to Dland"
 STATE="California"
-STATUS="Incomplete"
+STATUS="incomplete"
 DESCRIPTION="Happiest place on Earth"
 DUEDATE="2017-05-20"
+CATEGORY="Travel"
+LOCATION="Park"
 
 curl "${API}${URL_PATH}" \
   --include \
@@ -20,7 +22,9 @@ curl "${API}${URL_PATH}" \
       "state": "'"${STATE}"'",
       "status": "'"${STATUS}"'",
       "description": "'"${DESCRIPTION}"'",
-      "due_date": "'"${DUEDATE}"'"
+      "due_date": "'"${DUEDATE}"'",
+      "category": "'"${CATEGORY}"'",
+      "location": "'"${LOCATION}"'"
     }
   }'
 
