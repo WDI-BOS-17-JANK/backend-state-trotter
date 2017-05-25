@@ -20,3 +20,29 @@ Each team member will need to create their own SECRET_KEY in their local reposit
 echo SECRET_KEY=$(/usr/local/opt/openssl/bin/openssl rand -base64 66 | tr -d '\n') >>.env
 ```
 Followed set-up from [`Express-API-Template`](https://github.com/ga-wdi-boston/express-api-template) for basic template setup per requirements in setup guide. Be sure to run the API server with 'npm start'.
+
+## API Routes
+#### Users
+| Verb   | URI Pattern          | Controller#Action |
+|--------|----------------------|-------------------|
+| POST   | /sign-up             | users#signup      |
+| POST   | /sign-in             | users#signin      |
+| DELETE | /sign-out/:id        | users#signout     |
+| PATCH  | /change-password/:id | users#changepw    |
+- post ‘/sign-up’ => ‘users#signup’
+- post ‘/sign-in’ => ‘users#signin’
+- delete ‘/sign-out/:id’ => ‘users#signout’
+- patch ‘/change-password/:id’ => ‘users#changepw’
+#### Items (Goals)
+| Verb   | URI Pattern      | Controller#Action      |
+|--------|------------------|------------------------|
+| GET    | /items      | items#index       |
+| GET    | /items/:id  | items#show        |
+| POST   | /items      | items#create      |
+| PATCH  | /items/:id  | items#update      |
+| DELETE | /items/:id  | items#destroy     |
+- get ‘/items/’ => ‘items#index’
+- get ‘/items/:id’ => 'items#show'
+- post ‘/items/’ => ‘items#create’
+- patch ‘/items/:id’ => ‘items#update’
+- delete ‘/items/:id’ => ‘items#destroy’
