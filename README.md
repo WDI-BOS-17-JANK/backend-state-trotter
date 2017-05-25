@@ -1,22 +1,9 @@
 # State Trotter
-A bucket list app divded by state.
+## A States Bucket-list App built by JANK (Joe Belmonte, Arlo Feirman, Nikki Riser, and Kelly English-James)
+- [State Trotter Express.js Backend API Repo](https://github.com/WDI-BOS-17-JANK/backend-state-trotter)
+- [State Trotter Frontend Repo](https://github.com/WDI-BOS-17-JANK/frontend-state-trotter)
+- [State Trotter Deployed API](https://mysterious-plains-14810.herokuapp.com/)
+- [State Trotter Deployed SPA](https://wdi-bos-17-jank.github.io/frontend-state-trotter/)
 
-Each team member will need to create their own SECRET_KEY in their local
-repositories, for development testing.
-I didn't push my .env file to Git Hub, as per best practices.
-
-You will use this terminal command in the root of the project directory to generate an
-.env file with a SECRET_KEY.
-
-echo SECRET_KEY=$(/usr/local/opt/openssl/bin/openssl rand -base64 66 | tr -d '\n') >>.env
-
-I also reccomend following step 8 from the express-api-template setup guide
-which is as follows.
-
-Run the API server with npm start. If you want your code to be reloaded on change, you should npm install -g nodemon and use nodemon instead of npm start.
-
-Link to set up guide - [https://github.com/ga-wdi-boston/express-api-template]
-
-The only neccessary step to follow is to set a SECRET_KEY.
-
-[https://mysterious-plains-14810.herokuapp.com/]
+## About State Trotter
+State Trotter is a bucket list app divded by state (see Frontend Repo for details).
