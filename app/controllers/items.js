@@ -12,8 +12,6 @@ const setModel = require('./concerns/set-mongoose-model');
 // will change
 const index = (req, res, next) => {
   // only find() items for currently signed in user
-  // console.log(req)
-  console.log(req.user)
   Item.find({_owner: req.user._id})
     .then(items => res.json({
       items: items.map((e) =>
